@@ -1,25 +1,11 @@
-.element{
-    background-color: #eee;
-    border: 1px solid #000;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    width: 90px;
-}
-
-.move{
-    position: absolute;
-    left: 0;
-}
-
 .animate, 
 .animate
 { 
-  -webkit-transition: .5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -webkit-transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  transition: .5s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 2s cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
   position: relative;
   display: block;
 } 

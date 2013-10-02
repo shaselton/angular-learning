@@ -4,7 +4,6 @@
 		this.originalPosition = true;
 		this.moveElement = function(){
 			this.originalPosition = !this.originalPosition;
-			console.log(this.originalPosition);
 		}
 	});
 
