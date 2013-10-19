@@ -1,0 +1,11 @@
+.test-form{
+
+}
+
+.test-form input.ng-pristine.ng-invalid{
+	background-color: #d3d3d3;
+}
+
+.test-form input.ng-invalid{
+	background-color: #f00;
+}
