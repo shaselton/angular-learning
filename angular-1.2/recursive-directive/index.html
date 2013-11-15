@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <style>
+        tree {
+    margin-left: 20px;
+    display: block;
+}
+</style>
+    </head>
+    <body ng-app="shaselton.directiveTest">
+
+        <div ng-controller="mainController">
+            <ul>
+               <li ng-repeat="family in seaword">
+                    <tree family="family" > 
+                            <!--HTML to be transcluded-->
+                            <span  ng-click="toggle()" >{{ family.name }}</span>
+                    </tree>
+                </li>
+            </ul>
+             
+        </div>
+
+
+        <script src="//code.angularjs.org/1.2.0rc1/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/Controllers/mainController.js"></script>
+        <script src="js/Directives/tree-directive.js"></script>
+
+    </body>
+</html>

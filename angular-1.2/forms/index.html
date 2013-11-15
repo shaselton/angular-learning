@@ -17,15 +17,19 @@
             <form name='testform' novalidate class='test-form'>
 
                 <label>Name
-                    <input type='text' ng-model='form.name' name='name' required/>
+                    <input type='text' ng-model='testform.name' name='name' required/>
                 </label>
                 
                 <label>other name
-                    <input type='text' ng-model='form.otherName' name='otherName' required/>
+                    <input type='text' ng-model='testform.otherName' name='otherName' required/>
                 </label>
 
                 <label>email
-                    <input type='email' ng-model='form.email' name='email' required />
+                    <input type='email' ng-model='testform.email' name='email' required />
+                </label>
+
+                <label>year
+                    <input type='number' ng-model='testform.number' name='number' min='1992' max='2001'/>
                 </label>
 
                 <button ng-click="submitForm()">submit</button>
@@ -35,7 +39,8 @@
         </div>
 
 
-        <script src="//code.angularjs.org/1.2.0rc1/angular.js"></script>
+       <!-- <script src="//code.angularjs.org/1.2.0rc1/angular.js"></script>-->
+        <script src="js/angular.js"></script>
         <script src="js/app.js"></script>
         <script src="js/Controllers/mainController.js"></script>
 
