@@ -1,0 +1,75 @@
+
+<style>
+	
+	.pane{
+		border: 1px solid #000;
+		float: left;
+		margin-left: 15%;
+		padding: 20px 25px;
+		position: relative;
+		width: 25%;
+	}
+
+	.pane li,
+	.breadcrumbs li{
+		list-style: none;
+	}
+
+	.breadcrumbs li{
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	.breadcrumbs li::after { 
+		content:"\00bb"; 
+	}
+
+	.breadcrumbs li:hover{
+		color: #ddd;
+		cursor: pointer;
+	}
+
+	.item{
+		line-height: 25px;
+		position:  relative;
+	}
+
+	.item:hover{
+		background-color: #eee;
+		cursor: pointer;
+	}
+
+	.expand{
+		cursor: pointer;
+		position: absolute;
+		right: 20px;
+	}
+
+	.expand:hover{
+		background-color: #f00;
+	}
+
+	.back-button{ 
+		cursor: pointer;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	button{
+		clear: both;
+		display: block;
+	}
+
+</style>
+	<ul class="breadcrumbs">
+		<li ng-repeat="crumb in breadcrumbs">
+			<span ng-click="jumpTo(crumb.structure, $index)">{{crumb.name}}</span>
+		</li>
+	</ul>
+	<ul class="pane" sortable>
+		<li ng-repeat="item in data.parentPane">
+			<div class="item" >{{item.name}} <span class="expand" ng-show="item.childNodes.length" ng-click="nextLevel( item.name, item.childNodes, $index)">-></span></div>
+		</li>
+	</ul>
+	<button ng-click="save()">save</button>
