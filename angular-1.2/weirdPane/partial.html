@@ -61,6 +61,28 @@
 		display: block;
 	}
 
+	.animate-item.ng-move,
+	.animate-item.ng-enter,
+	.animate-item.ng-leave {
+	  -webkit-transition:all linear 0.5s;
+	  transition:all linear 0.5s;
+	}
+
+	.animate-item.ng-leave.ng-leave-active,
+	.animate-item.ng-move,
+	.animate-item.ng-enter {
+	  opacity:0;
+	  max-height:0;
+	}
+
+	.animate-item.ng-leave,
+	.animate-item.ng-move.ng-move-active,
+	.animate-item.ng-enter.ng-enter-active {
+	  opacity:1;
+	  max-height:40px;
+	}
+
+
 </style>
 	<ul class="breadcrumbs">
 		<li ng-repeat="crumb in breadcrumbs">
@@ -68,7 +90,7 @@
 		</li>
 	</ul>
 	<ul class="pane" sortable>
-		<li ng-repeat="item in data.parentPane">
+		<li ng-repeat="item in data.parentPane" class="animate-item">
 			<div class="item" >{{item.name}} <span class="expand" ng-show="item.childNodes.length" ng-click="nextLevel( item.name, item.childNodes, $index)">-></span></div>
 		</li>
 	</ul>

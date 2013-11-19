@@ -6,7 +6,7 @@
 ;(function(){
 	'use strict';
 
-	angular.module( 'shaselton.paneJazz', [ 'ngRoute' ] )
+	angular.module( 'shaselton.paneJazz', [ 'ngRoute', 'ngAnimate' ] )
 	.config(['$routeProvider', function($routeProvider) {
 	    $routeProvider.when('/', {templateUrl: 'partial.html', controller: 'mainController'})
 	    .otherwise({redirectTo: '/'});
